@@ -1,0 +1,24 @@
+id  : MultipartForm
+key : multipartform
+name: Multipart Form
+version: 0.1
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+l10n_class: MultipartForm::L10N
+description: '<__trans phrase="Set Form of edit screen to enctype=multipart/form-data.">'
+config_settings:
+    MultipartFormEntry:
+        default: 1
+    MultipartFormPage:
+        default: 1
+    MultipartFormCategory:
+        default: 1
+    MultipartFormFolder:
+        default: 0
+    MultipartFormAuthor:
+        default: 0
+callbacks:
+    template_source.edit_entry: $multipartform::MultipartForm::Plugin::_multipart_form
+    template_source.edit_category: $multipartform::MultipartForm::Plugin::_multipart_form
+    template_source.edit_folder: $multipartform::MultipartForm::Plugin::_multipart_form
+    template_source.edit_author: $multipartform::MultipartForm::Plugin::_multipart_form
